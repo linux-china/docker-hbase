@@ -1,0 +1,10 @@
+<configuration>
+  <property>
+    <name>hbase.rootdir</name>
+    <value>file:///var/lib/hbase</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.property.dataDir</name>
+    <value>/var/lib/zookeeper</value>
+  </property>
+</configuration>  
