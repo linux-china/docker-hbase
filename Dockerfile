@@ -6,6 +6,8 @@ RUN ln -s /usr/local/hbase-0.98.9-hadoop2 /usr/local/hbase
 ADD start.sh /usr/local/hbase/start-tail.sh
 ADD hbase-site.xml /usr/local/hbase/conf/
 
+RUN sed -i.bak -r 's/=(INFO|DEBUG)/=WARN/' /usr/local/hbase/conf/log4j.properties
+
 VOLUME ["/var/lib/hbase", "/var/lib/zookeeper"]
 EXPOSE 2181 60000 60020
 
