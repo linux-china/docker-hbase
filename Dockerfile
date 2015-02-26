@@ -1,5 +1,7 @@
 FROM java:7-jre
 
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/jre
+
 RUN wget --quiet -O - http://apache.mirrors.hoobly.com/hbase/stable/hbase-0.98.9-hadoop2-bin.tar.gz | tar --directory /usr/local -xzf -
 RUN ln -s /usr/local/hbase-0.98.9-hadoop2 /usr/local/hbase
 
